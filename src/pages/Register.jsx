@@ -17,7 +17,6 @@ export default function Register({ users, onRegister }) {
     const { name, value } = e.target;
 
     if (name === "studentId") {
-      // Allow only digits and cap length at 7 characters
       const digitsOnly = value.replace(/\D/g, "").slice(0, 7);
       setForm({ ...form, studentId: digitsOnly });
       return;
